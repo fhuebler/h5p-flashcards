@@ -81,12 +81,9 @@ H5P.Flashcards = (function ($) {
       str = str.toLowerCase();
     }
 
-    return str.trim()
-        .replace(/&/g, "&amp;")
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;")
-        .replace(/"/g, "&quot;")
-        .replace(/'/g, "&#039;");
+    var elem = document.createElement('textarea');
+    elem.innerHTML = str;
+    return elem.value;
   }
 
   /**
@@ -109,9 +106,7 @@ H5P.Flashcards = (function ($) {
    */
   function isCorrectAnswer (card, userAnswer, caseSensitive) {
     var answerStr = card.answer || '';
-    if(!caseSensitive) {
-      answerStr = answerStr.toLowerCase();
-    }
+    answerStr = cleanUserInput(answerStr, caseSensitive);
 
     var answers = answerStr.split('/').map(trimString);
     var cleanedUserAnswer = cleanUserInput(userAnswer, caseSensitive);
