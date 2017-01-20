@@ -6,11 +6,12 @@
 			"label": "Standard"
 		}],
 		"label": "Karten",
+		"entity": "Karte",
 		"field": {
 			"label": "Karte",
 			"fields": [{
 				"label": "Frage",
-				"description": "Optionale textliche Frage für die Karte. (Die Karte braucht nur ein Bild, einen Text oder beides)"
+				"description": "Optionaler Fragentext für die Karte. (Die Karte kann nur ein Bild, nur Text oder beides verwenden)"
 			}, {
 				"label": "Antwort",
 				"description": "Optionale Antwort(Lösung) für die Karte."
@@ -20,8 +21,7 @@
 			}, {
 				"label": "Tipp",
 				"fields": [{
-					"label": "Tipp Text",
-					"tags": []
+					"label": "Text für den Tipp"
 				}]
 			}]
 		}
@@ -30,15 +30,15 @@
 		"default": "Karte @card von @total",
 		"description": "Fortschrittstext, verfügbare Variablen: @card und @total. Beispiel: 'Karte @card von @total'"
 	}, {
-		"label": "Text des Weiter Buttons",
+		"label": "Text des \"Weiter\" Buttons",
 		"default": "Weiter"
 	}, {
-		"label": "Text für den Vorherig Button",
-		"default": "Vorherig"
+		"label": "Text für den \"Zurück\" Button",
+		"default": "Zurück"
 	}, {
-		"label": "Text für den Antworten überprüfen Button",
+		"label": "Text für den \"Antworten überprüfen\" Button",
 		"default": "Überprüfen"
 	}, {
-		"label": "Eingabe des Benutzers erfordern, bevor die Lösung eingesehen werden kann"
+		"label": "Eingabe des Benutzers fordern, bevor die Lösung eingesehen werden kann"
 	}]
 }
